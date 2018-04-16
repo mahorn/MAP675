@@ -37,23 +37,23 @@
   <script>
     var options = {
         center: [33.726,-84.365],
-        zoom: 9,
+        zoom: 11,
         minZoom: 9,
         maxZoom: 16,
         maxBounds: [
             [33.911, -84.032],
             [33.620, -84.772]
         ]
-};
-var map = L.map('map', options);
+    };
+    var map = L.map('map', options);
       
-      map.createPane('labels');
-      map.getPane('labels').style.zIndex = 650;
-      map.getPane('labels').style.pointerEvents = 'none';
+        map.createPane('labels');
+        map.getPane('labels').style.zIndex = 650;
+        map.getPane('labels').style.pointerEvents = 'none';
       
-      L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/dark_only_labels/{z}/{x}/{y}.png', {
-          attribution: '©OpenStreetMap, ©CartoDB',
-          pane: 'labels'
+    L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/dark_only_labels/{z}/{x}/{y}.png', {
+        attribution: '©OpenStreetMap, ©CartoDB',
+        pane: 'labels'
       }).addTo(map);
 
 //L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
@@ -134,18 +134,18 @@ var map = L.map('map', options);
           color: '#ff6e00',
           weight: 2,
           opacity: 1
-      }
+      };
       
       var busOptions = {
           color: '#f0f062',
           weight: .1,
           opacity: 1
-      }
+      };
       
       var tramOptions = {
           color: '#ff6e00',
           weight: 2
-      }
+      };
       
       var otherRoutes = {
           color: '#ff6e00'
